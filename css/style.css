@@ -58,6 +58,14 @@ h1 {
     color: hsla(0, 0%, 100%, 0.75);
 }
 
+.attribution {
+    font-size: 11px; text-align: center; position: relative; top: 85vh;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
+
 /*********************BUTTON**********************/
 button {
     color: hsl(0, 0%, 95%);
