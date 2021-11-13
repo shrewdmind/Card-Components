@@ -1,0 +1,158 @@
+body {
+    background-color: hsl(0, 0%, 95%);
+    box-sizing: border-box;
+    font-size: 15px;
+    place-content: center;
+}
+
+main {
+    place-items: center;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: .5rem;
+}
+
+h1 {
+    margin: 2rem 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 2.5rem;
+    color: hsl(0, 0%, 95%);
+}
+
+/************************ELEMENTS**********************/
+.elements {
+    width: fit-content;
+    display: grid;
+}
+
+.sedans {
+    grid-column-start: 1;
+    background-color: hsl(31, 77%, 52%);
+}
+
+.suv {
+    grid-column-start: 2;
+    background-color: hsl(184, 100%, 22%);
+}
+
+.luxury {
+    grid-column-start: 3;
+    background-color: hsl(179, 100%, 13%);
+}
+
+.join {
+    padding: 2.9rem;
+    width: fit-content;
+}
+
+.article {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    width: 210px;
+    line-height: 1.5rem;
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
+/*********************BUTTON**********************/
+button {
+    color: hsl(0, 0%, 95%);
+    font-family: 'Lexend Deca', sans-serif;
+    margin: 5rem 0 0;
+    padding: .8rem 2.2rem;
+    border-radius: 2rem;
+    font-weight: 400;
+    border-color: hsl(0, 0%, 95%);
+    border-style: solid;
+}
+
+.sedans button {
+    color: hsl(31, 77%, 52%);
+}
+
+.suv button {
+    color: hsl(184, 100%, 22%);
+}
+
+.luxury button {
+    color: hsl(179, 100%, 13%);
+}
+
+button:hover {
+    cursor: pointer;
+    color:hsla(0, 0%, 100%, 0.75);
+    border-color: hsl(0, 0%, 95%);
+}
+
+.sedans button:hover {
+    background-color: hsl(31, 77%, 52%);;
+}
+
+.luxury button:hover {
+    background-color: hsl(179, 100%, 13%);
+}
+
+.suv button:hover {
+    background-color: hsl(184, 100%, 22%);
+}
+
+/******************RESPONSIVENESS********************/
+@media screen and (max-width: 925px) and (min-width: 633px) {
+    
+    main {
+        top: 60%;        
+    }
+    
+    .luxury {
+        grid-column: 1 / span 2;
+        text-align: center;
+    }
+
+    .luxury .article {
+        width: auto;
+    }
+
+    button {
+        margin: 2.5rem 0 0;
+    }
+
+    .attribution {
+        top: 115vh;
+    }
+}
+
+
+@media screen and (max-width: 632px) {
+
+    main {
+        top: 85%;        
+    }
+
+    .join {
+        grid-column-start: 1;
+    }
+
+    .sedans {
+        grid-row-start: 1;
+    }
+    
+    .suv {
+        grid-row-start: 2;
+    }
+    
+    .luxury {
+        grid-row-start: 3;
+    }
+
+    button {
+        margin: 2.5rem 0 0;
+    }
+
+    .attribution {
+        top: 172vh;
+    }
+}
